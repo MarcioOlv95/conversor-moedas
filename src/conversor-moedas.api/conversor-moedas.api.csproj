@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>conversor_moedas.api</RootNamespace>
+    <UserSecretsId>6ba900db-d6b8-4f00-a278-1962ac963fea</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="MediatR" Version="12.1.1" />
+	<PackageReference Include="AutoMapper" Version="12.0.1" />
+	<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
+		<PrivateAssets>all</PrivateAssets>
+		<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	</PackageReference>
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Relational.Design" Version="1.1.6" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+		<PrivateAssets>all</PrivateAssets>
+		<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	</PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\conversor-moedas.api.application\conversor-moedas.api.application.csproj" />
+    <ProjectReference Include="..\conversor-moedas.infrastructure\conversor-moedas.infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
